@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download Praava Health app">
+    <title>Download Praava Health App</title>
+    
+    <script>
+        // Auto-redirect based on device
+        window.onload = function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            
+            // iOS detection (iPhone, iPad, iPod)
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                setTimeout(function() {
+                    window.location.href = "https://apps.apple.com/us/app/praava-health/id6748116664";
+                }, 100);
+            }
+            // Android detection
+            else if (/android/i.test(userAgent)) {
+                setTimeout(function() {
+                    window.location.href = "https://play.google.com/store/apps/details?id=com.praavahealth.patientportal.app&hl=en";
+                }, 100);
+            }
+            // For desktop, show both links
+        }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 30px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .playstore {
+            background: #34A853;
+            color: white;
+        }
+        
+        .playstore:hover {
+            background: #2d9049;
+        }
+        
+        .appstore {
+            background: #007AFF;
+            color: white;
+        }
+        
+        .appstore:hover {
+            background: #0066dd;
+        }
+        
+        .icon {
+            font-size: 24px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 14px;
+        }
+        
+        /* Mobile responsiveness */
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 25px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .btn {
+                padding: 15px 25px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🏥</div>
+        <h1>Download Praava Health</h1>
+        <p>Get our app for the best healthcare experience</p>
+        
+        <div class="buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.praavahealth.patientportal.app&hl=en" 
+               class="btn playstore">
+                <span class="icon">📱</span>
+                <span>Download on Google Play</span>
+            </a>
+            
+            <a href="https://apps.apple.com/us/app/praava-health/id6748116664" 
+               class="btn appstore">
+                <span class="icon">🍎</span>
+                <span>Download on App Store</span>
+            </a>
+        </div>
+        
+        <div class="footer">
+            Available for Android and iOS
+        </div>
+    </div>
+</body>
+</html>
